@@ -1,0 +1,15 @@
+.container { 
+    display: flex;
+    justify-content: center;
+    width: 50%;
+}
+.chartlabel {
+    font-size: large;
+}
+@media (max-width: 770px) {
+    .container { 
+        display: flex;
+        justify-content: center;
+        width: 85%;
+    }
+}

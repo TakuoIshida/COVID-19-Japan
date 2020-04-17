@@ -1,0 +1,50 @@
+.container { 
+  margin: 50px 0;
+}
+
+
+.loading2 {
+    width: 50px;
+    height: 20px;
+    margin: 0 auto;
+    font-size: 0;
+    text-align: center;
+  }
+  
+  .loading2 > p {
+    display: inline-block;
+    width: 6px;
+    height: 100%;
+    margin: 0 2px;
+    background-color: #333;
+    transform-origin: center bottom;
+    animation: rectY 1.2s infinite linear;
+  }
+  
+  .loading2 .rect2 {
+    animation-delay: -1s;
+  }
+  
+  .loading2 .rect3 {
+    animation-delay: -2s;
+  }
+  
+  .loading2 .rect4 {
+    animation-delay: -3s;
+  }
+  
+  .loading2 .rect5 {
+    animation-delay: -4s;
+  }
+  
+  @keyframes rectY {
+    0%,
+    50%,
+    100% {
+      transform: scaleY(0.5);
+    }
+  
+    30% {
+      transform: scaleY(2);
+    }
+  }
