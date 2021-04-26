@@ -35,6 +35,7 @@ class App extends React.Component {
         // top画像、全県or各県のデータ値、セレクトボタン、チャートの順で挿入
         return (
             <div className={styles.container}>
+                <p>{ process.env.REACT_APP_TEST }</p>
                 <img className={ styles.image } src={ covid } alt="Covid-19" />
                 <Cards Cardsdata={ Cardsdata }/>
                 {/* <PrefecturePicker handleprefectureChange={this.handleprefectureChange}/> */}
