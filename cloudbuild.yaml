@@ -9,5 +9,9 @@ steps:
       - 'REACT_APP_TEST=$_REACT_APP_TEST'
       - 'REACT_APP_CARDS_URL=$_REACT_APP_CARDS_URL'
       - 'REACT_APP_CHART_URL=$_REACT_APP_CHART_URL'
-  - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['rsync', '-R', './build', 'gs://hogehoge-react-app']
+  # - name: 'gcr.io/cloud-builders/gsutil'
+  #   args: ['rsync', '-R', './build', 'gs://hogehoge-react-app']
+  - name: 'gcr.io/cloud-builders/gcloud'
+    args: ['app', 'deploy', 'app.yaml', '--project', $_PROJECT_ID]
+    env:
+      - 'PROJECT_ID=$_PROJECT_ID'
