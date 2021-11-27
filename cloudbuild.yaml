@@ -7,4 +7,4 @@ steps:
     args: ['run', 'build']
   - name: 'gcr.io/cloud-builders/gsutil'
     args:
-    - rsync -R ./build gs://hogehoge-react-app
+    - gsutil　rsync -R ./build gs://hogehoge-react-app
