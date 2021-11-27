@@ -12,4 +12,4 @@ steps:
   # - name: 'gcr.io/cloud-builders/gsutil'
   #   args: ['rsync', '-R', './build', 'gs://hogehoge-react-app']
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['app', 'deploy', 'app.yaml', '--project', '${PROJECT_ID}', '--service_account', '${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com']
+    args: ['app', 'deploy', 'app.yaml', '--project', '${PROJECT_ID}', '--impersonate-service-account', '${PROJECT_NUMBER}@cloudbuild.gserviceaccount.com']
