@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const Charturl = 'https://covid19-japan-web-api.now.sh/api/v1/total?history=true';
-const Cardsurl = 'https://www.stopcovid19.jp/data/covid19japan.json';
+const Charturl = process.env.REACT_APP_CHART_URL;
+const Cardsurl = process.env.REACT_APP_CARDS_URL;
 
 // APIから全国の最新データを取得する→Cards
 export const fetchTotal = async () => {
