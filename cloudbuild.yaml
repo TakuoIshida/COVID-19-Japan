@@ -6,8 +6,8 @@ steps:
     entrypoint: npm
     args: ['run', 'build']
     env:
-      - REACT_APP_CARDS_URL=$_REACT_APP_CARDS_URL
-      - REACT_APP_CHART_URL=$_REACT_APP_CHART_URL
-      - REACT_APP_TEST=$_REACT_APP_TEST
+      - 'REACT_APP_TEST=$_REACT_APP_TEST'
+      - 'REACT_APP_CARDS_URL=$_REACT_APP_CARDS_URL'
+      - 'REACT_APP_CHART_URL=$_REACT_APP_CHART_URL'
   - name: 'gcr.io/cloud-builders/gsutil'
     args: ['rsync', '-R', './build', 'gs://hogehoge-react-app']
